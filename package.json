@@ -1,0 +1,18 @@
+{
+  "name": "applerepair",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "author": "Andrew B.",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^7.0.14",
+    "autoprefixer": "^9.5.0",
+    "cssnano": "^4.1.10",
+    "sass": "^1.17.3"
+  }
+}

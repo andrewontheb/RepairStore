@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/scss/style.scss">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="index.js"></script>
+  <title>Apple Repair</title>
+</head>
+<body>
+
+  <header>
+    <nav id="nav">
+      <div class="logo">
+        <img src="img/logo_top.png" alt="logo">
+        <img src="img/logo_bottom.png" alt="logo_bottom">
+      </div>
+
+      <ul id="nav-list" class="nav-list">
+        <li class="nav-list__item">О нас</li>
+        <li class="nav-list__item showTroublesMenu">Ремонт</li>
+        <li class="nav-list__item showTroublesMenu">Проблема с устройством</li>
+        <li class="nav-list__item">Клиентам
+          <div id="chevron"></div>
+          <ul class="sub-nav-list">
+            <li class="sub-nav-list__item">Акции</li>
+            <li class="sub-nav-list__item">Бонусы</li>
+            <li class="sub-nav-list__item">Гарантия</li>
+          </ul>
+        </li>
+        <li class="nav-list__item">Контакты</li>
+        <li class="nav-list__item">Задать вопрос</li>
+        <li class="nav-list__item active">Магазин</li>
+        <li class="nav-list__item"><button class="nav-list__item btn btn--lime modal-trigger trigger-diagnostics">Записаться на Диагностику</button></li>
+      </ul>
+      <button type="button" class="nav-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </nav>
+  </header>
+  <main id="main-content">
+    <div class="main-content__column-left">
+      <div class="logo-title">
+        <img src="img/repair2.svg" alt="text_logo">
+        <img src="img/subelem.png" alt="vector">
+      </div>
+
+      <form action="" id="form">
+        <div class="group">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Имя</label>
+        </div>
+        <div class="group">
+          <input type="text"  required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Телефон</label>
+        </div>
+        <div class="group">
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Опишите модель устройства и поломку</label>
+        </div>
+        <div class="group">
+          <button type="button" class=" btn btn--peach modal-trigger trigger-gratitude">Узнать цену ремонта</button>
+        </div>
+      </form>
+    </div>
+    <div class="main-content__column-right">
+      <div class="slick-slider">
+        <img src="img/slide5.png" alt="slideimg1">
+        <img src="img/slide5.png" alt="slideimg2">
+        <img src="img/slide5.png" alt="slideimg3">
+        <img src="img/slide5.png" alt="slideimg4">
+      </div>
+      <div class="slick-slider__dots">
+      </div>
+    </div>
+  </main>
+  <div class="modal modal--align modal-gratitude">
+  <div class="modal__container modal__container--gratitude">
+  <a class="modal__close modal__close--x">&#x2715;</a>
+  <h1>Благодарим за заявку!</h1>
+  <p>Наш менеджер свяжется с вами в течении 5-ти минут</p>
+  <button class="modal__close btn btn--peach">Спасибо!</button>
+</div>
+</div>
+
+<div class="modal modal--align modal-diagnostics">
+  <div class="modal__container modal__container--diagnostics">
+    <a class="modal__close modal__close--x">&#x2715;</a>
+    <h1>Записаться на диагностику</h1>
+    <form action="#" class="form-in-modal">
+      <div class="group">
+        <input type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Имя</label>
+      </div>
+      <div class="group">
+        <input type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Телефон</label>
+      </div>
+      <div class="group">
+        <input type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Опишите модель устройства и поломку</label>
+      </div>
+      <span class="privacy-link">Нажимая «Отправить заявку», вы соглашаетесь с <a href="#">политикой конфиндициальности</a> </span>
+    </form>
+
+    <button class="modal__close btn btn--peach ">Записаться</button>
+  </div>
+</div>
+<div class="troubleshooting">
+  <a class="btn--close">✕</a>
+  <div class="troubleshooting__container">
+    <div class="device-tab-list">
+      <div class="device-tab-list__item device-tab-list__item--iphone  active">
+        <svg width="22" height="35" viewBox="0 0 22 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="Vector" d="M19.798 0.573853H2.2023C1.01534 0.573853 0.0498047 1.53946 0.0498047 2.72642V32.4214C0.0498047 33.6082 1.01542 34.5739 2.20237 34.5739H19.798C20.9849 34.5739 21.9505 33.6083 21.9505 32.4214V2.72642C21.9505 1.53946 20.9849 0.573853 19.798 0.573853ZM1.12846 5.9841H20.8719V28.4695H1.12846V5.9841ZM2.2023 1.65251H19.798C20.3901 1.65251 20.8719 2.13423 20.8719 2.72642V5.265H1.12846V2.72642C1.12846 2.13423 1.61019 1.65251 2.2023 1.65251ZM19.798 33.4952H2.2023C1.61019 33.4952 1.12839 33.0135 1.12839 32.4213V29.1886H20.8718V32.4213C20.8718 33.0135 20.3901 33.4952 19.798 33.4952Z" fill="#646F75"/>
+        </svg>
+        <span>iPhone</span>
+      </div>
+      <div class="device-tab-list__item device-tab-list__item--ipad">
+        <svg width="28" height="35" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.9636 0.0928955H1.77612C1.12885 0.0928955 0.604248 0.654228 0.604248 1.34647V23.9108C0.604248 24.603 1.12885 25.1643 1.77612 25.1643H18.9636C19.6108 25.1643 20.1355 24.603 20.1355 23.9108V1.34647C20.1355 0.654228 19.6108 0.0928955 18.9636 0.0928955ZM19.3542 23.9108C19.3542 24.1416 19.1792 24.3286 18.9636 24.3286H1.77612C1.56036 24.3286 1.3855 24.1416 1.3855 23.9108V1.34647C1.3855 1.11567 1.56036 0.92861 1.77612 0.92861H18.9636C19.1792 0.92861 19.3542 1.11567 19.3542 1.34647V23.9108Z" fill="#646F75"/>
+        </svg>
+        <span>iPad</span>
+      </div>
+      <div class="device-tab-list__item device-tab-list__item--macintosh">
+        <svg width="36" height="35" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M33.3012 0.473877H2.6988C1.2108 0.473877 0 1.68468 0 3.17328V22.6739V25.3745C0 26.8625 1.2108 28.0739 2.6988 28.0739H13.4124C13.4976 29.1251 13.0416 30.1631 12.1986 30.7571L11.118 31.5191C11.049 31.5671 10.9914 31.6253 10.944 31.6901C10.191 31.7687 9.6 32.4005 9.6 33.1739C9.6 34.0007 10.2726 34.6739 11.1 34.6739H24.9C25.7274 34.6739 26.4 34.0007 26.4 33.1739C26.4 32.4005 25.8096 31.7693 25.0566 31.6895C25.0098 31.6259 24.9528 31.5683 24.8856 31.5209L23.8032 30.7583C22.9596 30.1637 22.503 29.1257 22.5882 28.0739H33.3012C34.7892 28.0739 36 26.8631 36 25.3745V22.6739V3.17328C36 1.68468 34.7892 0.473877 33.3012 0.473877ZM1.2 3.17328C1.2 2.34648 1.8726 1.67388 2.6988 1.67388H33.3012C34.1274 1.67388 34.8 2.34648 34.8 3.17328V21.4739H1.2V3.17328ZM24.9 33.4739H11.1C10.9374 33.4739 10.8 33.3365 10.8 33.1739C10.8 33.0113 10.9374 32.8739 11.1 32.8739H11.5356H24.4644H24.9C25.0626 32.8739 25.2 33.0113 25.2 33.1739C25.2 33.3365 25.0626 33.4739 24.9 33.4739ZM21.3852 28.0751C21.3054 29.4725 21.915 30.8453 23.0226 31.6739H12.9786C14.0862 30.8453 14.6958 29.4719 14.616 28.0739L21.3852 28.0751ZM34.8 25.3745C34.8 26.2013 34.1274 26.8739 33.3012 26.8739H22.8348H13.1658H2.6988C1.8726 26.8739 1.2 26.2013 1.2 25.3745V22.6739H34.8V25.3745Z" fill="#646F75"/>
+        </svg>
+        <span>Mac</span>
+      </div>
+    </div>
+    <div class="model-type">
+      <div class="form select-form">
+        <div class="group select-group">
+          <span class="select-arrow"></span>
+          <select class="select" required>
+            <option value="" disabled selected></option>
+            <option value="4s">4s</option>
+            <option value="5">5</option>
+            <option value="SE">SE</option>
+          </select>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label class="label">Выберите модель</label>
+        </div>
+      </div>
+      <ul class="model-type__list">
+        <li class="model-type__list--item active">4</li>
+        <li class="model-type__list--item">4s</li>
+        <li class="model-type__list--item">5</li>
+        <li class="model-type__list--item">5s</li>
+        <li class="model-type__list--item">SE</li>
+        <li class="model-type__list--item">6</li>
+        <li class="model-type__list--item">6Plus</li>
+        <li class="model-type__list--item">6s</li>
+        <li class="model-type__list--item">7</li>
+        <li class="model-type__list--item">7Plus</li>
+        <li class="model-type__list--item">8</li>
+        <li class="model-type__list--item">8Plus</li>
+        <li class="model-type__list--item">X</li>
+        <li class="model-type__list--item">Xs</li>
+        <li class="model-type__list--item">Xs Max</li>
+        <li class="model-type__list--item"><b>Все модели    <div id="chevron"></div></b></li>
+        <li class="model-type__list--item"><button class="btn btn--lime-hover-like">Смотреть прайс</button></li>
+      </ul>
+
+    </div>
+    <p class="troubles__title">Частые проблемы</p>
+
+    <div class="troubles">
+      <ul class="troubles-list">
+        <li class="troubles-list--subtitle">Дисплей</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+      </ul>
+      <ul class="troubles-list">
+        <li class="troubles-list--subtitle">Электроника</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+      </ul>
+      <ul class="troubles-list">
+        <li class="troubles-list--subtitle">Корпус</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+      </ul>
+      <ul class="troubles-list">
+        <li class="troubles-list--subtitle">Фурнитура</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+      </ul>
+      <ul class="troubles-list">
+        <li class="troubles-list--subtitle">Аудио</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+        <li class="troubles-list__item">Не работает экран</li>
+        <li class="troubles-list__item">Разбит экран</li>
+      </ul>
+      <!-- it's just a plug -->
+      <ul class="troubles-list"></ul>
+      <!-- for proper resize -->
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

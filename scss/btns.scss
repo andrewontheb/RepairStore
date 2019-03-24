@@ -1,0 +1,116 @@
+.btn {
+  padding: 11px 16.5px;
+  line-height: normal;
+  font-size: 12px;
+  background: $peach;
+  box-shadow: none;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.5s ease;
+  font-family: $mainFont;
+  &--lime {
+    border: none;
+    background-color: $lime;
+    color: white;
+    letter-spacing: 0.1em;
+    line-height: normal;
+    &:hover {
+      border: 2px solid $lime;
+      padding: 9px 14.5px;
+      background: #f7f7f7;
+      color: $lime;
+    }
+    &:active {
+      box-shadow: inset -8px 8px 13px -8px rgba(136,213,201,1);
+    }
+    &-hover-like {
+      border: 1px solid $lime;
+      padding: 16.5px 55px;
+      background: white;
+      color: $lime;
+    }
+  }
+  &--peach {
+    padding: 17.5px 64px;
+    border: none;
+    background-color: $peach;
+    color: white;
+    letter-spacing: 0.1em;
+    line-height: normal;
+    &:hover {
+      border: 2px solid $peach;
+      padding: 15.5px 62px;
+      background: #f7f7f7;
+      color: $peach;
+    }
+    &:active {
+      box-shadow: inset -8px 8px 13px -8px  #ff9679;
+    }
+  }
+  &--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 20px;
+    color: #646F75;
+    cursor: pointer;
+    @media (min-width: 969px) {
+      display: none;
+    }
+    @media (max-width: 480px) {
+      top: 25px;
+    }
+  }
+}
+
+#chevron {
+  display: inline-flex;
+    position: relative;
+    top: -3px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0px;
+    height: 3px;
+    width: 10px;
+    @media (max-width: 969px) {
+      left: 15px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50%;
+      background: #8c8c8c;
+      transform: skew(0deg, -45deg);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 51%;
+      background: #8c8c8c;
+      transform: skew(0deg, 45deg);
+    }
+  }
+
+.select-arrow {
+  @extend #chevron;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: initial;
+  transform: translate(-50%, -50%);
+  &:after,&:before {
+    background: $primaryFontColor;
+  }
+}

@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+html,body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-size: $font-size;
+  font-family: $mainFont;
+  color: $primaryFontColor;
+  background: url('../img/bgpattern.png') 100% 100% no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
